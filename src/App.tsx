@@ -2,14 +2,17 @@ import React, { useState } from 'react'
 import logo from './logo.svg'
 import './App.css'
 
+const Brick:React.FC<IBrick> = ({brick}) => (
+  <div>Brick</div>
+)
+
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Hello Vite + React!</p>
+        <p>Listy</p>
         <p>
           <button onClick={() => setCount((count) => count + 1)}>
             count is: {count}
@@ -38,6 +41,9 @@ function App() {
           </a>
         </p>
       </header>
+      <section>
+        <Brick />
+      </section>
     </div>
   )
 }
